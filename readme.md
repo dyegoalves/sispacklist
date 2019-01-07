@@ -18,6 +18,6 @@
 </p>
 
 <p align="center">
-<a href="https://vuejs.org/"><img src="https://vuejs.org/images/logo.png" alt="Vue JS"></a>
+    <a href="https://vuejs.org/"><img width="240" height="64" src="https://thombruce.com/uploads/vuejs.svg" alt="Vue JS"></a>
 </p>
 
