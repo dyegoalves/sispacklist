@@ -1,5 +1,5 @@
 
-<script>
+'<script>
     export default {
         mounted() {
             console.log('Component mounted.')
@@ -9,10 +9,6 @@
 
 <style>
 
- #ex01{
-        padding-top: 55px        
- }
-        
 </style>
 
 <template>
@@ -21,8 +17,7 @@
             <div class="col-md-8">
                 <div class="card card-default">
                     <div class="card-body">
-                        Eu sou um exemplo de componente - VUE js aa!
-                        <alert-sucess></alert-sucess>
+                        Eu sou um exemplo de componente - VUE js
                     </div>
                 </div>
             </div>

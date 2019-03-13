@@ -9,8 +9,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-       Home
-        <small> - Inicio do sistema </small>
+       <span class="fa fa-home"></span> Home
+        <small> - Inicio do Sistema</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -24,8 +24,7 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Title</h3>
-
+          <h3 class="box-title">Nome OP</h3>
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                     title="Collapse">
@@ -35,11 +34,11 @@
           </div>
         </div>
         <div class="box-body">
-          Start creating your amazing application!
+          1* Sistema criado para conferencia de CKD para o processo produtido de PLACAS SMT
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
-          Footer
+          Descrição Operação
         </div>
         <!-- /.box-footer-->
       </div>

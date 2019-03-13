@@ -1,2 +1,9 @@
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('alert-sucess', require('./components/alert.vue').default);
+Vue.component(
+    "example-component",
+    require("./components/ExampleComponent.vue").default
+);
+
+Vue.component(
+    "pesquisar-operacoes",
+    require("./components/pesquisarOperacao.vue").default
+);

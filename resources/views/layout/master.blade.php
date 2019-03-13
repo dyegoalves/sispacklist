@@ -8,8 +8,6 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-
- 
   <link rel="stylesheet" href="/css/app.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -17,9 +15,9 @@
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
+    <![endif]-->
   <!-- Google Font -->
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -32,7 +30,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>S</b>PLT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Sis</b>PACKLIST</span>
+      <span class="logo-lg"><b><span class="fa fa-industry"></span> SIS</b>PKL </span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -45,11 +43,15 @@
       </a>
 
       <div class="navbar-custom-menu">
+             
+
         <ul class="nav navbar-nav">
-                
-                  
+              
+                            
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
+                          
+
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="/img/dy.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Alexander Pierce</span>
@@ -115,24 +117,25 @@
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
-      
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li  class="header text-center ">MENU</li>
+
+       <pesquisar-operacoes></pesquisar-operacoes>  
+            
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <i class="fa fa-dashboard"></i> <span>Estoque</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Estoque</a></li>
             <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         </li>
                                        
-        <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+        <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentacão</span></a></li>
        
       </ul>
     </section>
