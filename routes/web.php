@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('app.home');
 });
+
+
+//  Estoque Routes 
+Route::get('/estoque-cadastros-PKLECP', function () { return 
+       view('app.estoque.cadastros.PKLECP');})
+       ->name('estoque-cadastros-PKLECP');
+
+

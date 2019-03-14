@@ -120,9 +120,11 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
 
+       {{-- Componente de pesquisar Operacao --}}
        <pesquisar-operacoes></pesquisar-operacoes>  
-            
-        <li class="treeview">
+
+        <li><a href="{{ url('/')}}"><i class="fa fa-book"></i> <span>Inicio</span></a></li>
+         <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Estoque</span>
             <span class="pull-right-container">
@@ -130,13 +132,13 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Estoque</a></li>
-            <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+              <li>
+                <a href="{{ route('estoque-cadastros-PKLECP')}}"><i class="fa fa-circle-o"></i> PKLECP
+              </a>
+            </li>
           </ul>
         </li>
-                                       
         <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentacão</span></a></li>
-       
       </ul>
     </section>
     <!-- /.sidebar -->
