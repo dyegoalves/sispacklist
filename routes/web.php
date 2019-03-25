@@ -1,24 +1,31 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+//Login
+Route::get('/', function () { return view('login');})->name('login');
+Route::get('/sair', "LoginController@logout")->name('sairUsuario');
+Route::post('/login', "LoginController@authenticate")->name('logarUsuario');
 
-Route::get('/', function () {
-    return view('app.home');
+Route::group(['middleware' => ['log']], function () {
+      
+    //Inicio do sistema
+    Route::get('/inicio', function () {return view('app.home');})->name("inicio");
+    //Cadastrar Produto em Estoque 
+    Route::get('/estoque-cadastros-PKLECP', "PKLECPController@viewPKLECP")->name('estoque-cadastros-PKLECP');
+
 });
 
 
-//Route Estoque Casdastro de Produtos 
-Route::get('/estoque-cadastros-PKLECP', function () { return 
-       view('app.estoque.cadastros.PKLECP');})
-       ->name('estoque-cadastros-PKLECP');
+   
+  
+
+
+
+
+   
+
+
+
+
+
 
 

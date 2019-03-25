@@ -24,7 +24,7 @@
       <div id="app" class="wrapper">
          <header class="main-header">
             <!-- Logo -->
-            <a href="../../index2.html" class="logo">
+            <a href="{{route('inicio')}}" class="logo">
                <!-- mini logo for sidebar mini 50x50 pixels -->
                <span class="logo-mini"><b>S</b>PLT</span>
                <!-- logo for regular state and mobile devices -->
@@ -45,14 +45,14 @@
                      <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="/img/dy.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs"> Dyego Alves </span>
+                        <span class="hidden-xs"> {{ Auth::user()->name}} </span>
                         </a>
                         <ul class="dropdown-menu">
                            <!-- User image -->
                            <li class="user-header">
                               <img src="/img/dy.jpg" class="img-circle" alt="User Image">
                               <p>
-                                 Dyego Alves - Web Developer
+                                 {{ Auth::user()->name}} - Web Developer
                                  <small>Jan 2016</small>
                               </p>
                            </li>
@@ -77,7 +77,7 @@
                                  <a href="perfil"> <button class="btn btn-success btn-flat" > Perfil </button> </a>
                               </div>
                               <div class="pull-right">
-                                 <a href="sair"> <button class="btn btn-danger btn-flat" > Sair </button> </a>
+                                 <a href="{{ route('sairUsuario')}}"> <button class="btn btn-danger btn-flat" > Sair </button> </a>
                               </div>
                            </li>
                         </ul>
@@ -102,7 +102,7 @@
                      <img src="/img/dy.jpg" class="img-circle" alt="User Image">
                   </div>
                   <div class="pull-left info">
-                     <p>Dyego Alves</p>
+                     <p>{{ Auth::user()->name}}</p>
                      <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                   </div>
                </div>
@@ -110,7 +110,7 @@
                <ul class="sidebar-menu" data-widget="tree">
                   {{-- Componente de pesquisar Operacao --}}
                   <pesquisar-operacoes></pesquisar-operacoes>
-                  <li><a href="{{ url('/')}}"><i class="fa fa-book"></i> <span>Inicio</span></a></li>
+                  <li><a href="{{ route('inicio')}}"><i class="fa fa-book"></i> <span>Inicio</span></a></li>
                   <li class="treeview">
                      <a href="#">
                      <i class="fa fa-dashboard"></i> <span>Estoque</span>
