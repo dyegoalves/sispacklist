@@ -13399,7 +13399,27 @@ table.text-center th {
 
 #loginpage {
   padding-top: 5%;
-  overflow-y: hidden;
   background-image: linear-gradient(to bottom right, #ecf0f5, #bebebe);
+}
+
+.input-peq {
+  height: 22px;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 0px;
+}
+
+#frmlogin .glyphicon {
+  position: absolute;
+  top: 5px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 

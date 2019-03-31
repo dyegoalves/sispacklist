@@ -4385,7 +4385,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#lbpesquisaOP {\r\n  color: #b8c7ce;\r\n  font-size: 14px;\r\n  font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-weight: 400;\n}\n#txtpesquisaOP {\r\n  border-radius: 2px;\n}\n#txtpesquisaOP::-webkit-input-placeholder {\r\n  font-size: 13px;\n}\n#txtpesquisaOP:-ms-input-placeholder {\r\n  font-size: 13px;\n}\n#txtpesquisaOP::-ms-input-placeholder {\r\n  font-size: 13px;\n}\n#txtpesquisaOP::placeholder {\r\n  font-size: 13px;\n}\r\n", ""]);
+exports.push([module.i, "\n#lbpesquisaOP {\r\n  color: #b8c7ce;\r\n  font-size: 16px;\r\n  font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-weight: 400;\n}\n#txtpesquisaOP {\r\n  border-radius: 1px;\n}\n#txtpesquisaOP::-webkit-input-placeholder {\r\n  font-size: 14px;\n}\n#txtpesquisaOP:-ms-input-placeholder {\r\n  font-size: 14px;\n}\n#txtpesquisaOP::-ms-input-placeholder {\r\n  font-size: 14px;\n}\n#txtpesquisaOP::placeholder {\r\n  font-size: 14px;\n}\r\n", ""]);
 
 // exports
 
@@ -35699,7 +35699,7 @@ var render = function() {
             expression: "pesquisaOP"
           }
         ],
-        staticClass: "form-control",
+        staticClass: "form-control input-peq",
         attrs: {
           type: "text",
           id: "txtpesquisaOP",

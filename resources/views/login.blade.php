@@ -9,20 +9,8 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
+  {{-- App css --}}
   <link rel="stylesheet" href="css/app.css" > 
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
-    <style type="text/css">
-    body {
-        overflow-x:hidden;
-    }
-    </style>
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -35,19 +23,18 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Controle e Gestao de Estoque</p>
-      
+     {{-- Erros alerts --}}
       @if (session('error'))
          <login-alert :errormesagem = "{{ json_encode(session('error')) }}" ></login-alert>
       @endif
-
-    <form action="{{ route('logarUsuario')}}" method="post">
+    <form id = "frmlogin"action="{{ route('logarUsuario')}}" method="post">
       @csrf
        <div class="form-group has-feedback">
-        <input required name='email' value="{{ old('email') }}" type="email" class="form-control" placeholder="Email">
+        <input required name='email' value="{{ old('email') }}" type="email" class="form-control input-peq " placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input required name='password' type="password" class="form-control" placeholder="Senha">
+        <input required name='password' type="password" class="form-control input-peq " placeholder="Senha">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -58,14 +45,11 @@
           <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
         </div>
       </div>
-          
-
-    </form>
+     </form>
     <a href="#">Esqueceu senha ?</a><br>
     <a href="register.html" class="text-center">Registrar novo Usuario? </a>
   </div>
 </div>
 </body>
-
- <script src="/js/app.js"></script>
+<script src="/js/app.js"></script>
 </html>

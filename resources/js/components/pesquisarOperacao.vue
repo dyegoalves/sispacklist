@@ -18,20 +18,21 @@ export default {
 };
 </script>
 
+
 <style>
 #lbpesquisaOP {
   color: #b8c7ce;
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 #txtpesquisaOP {
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
 #txtpesquisaOP::placeholder {
-  font-size: 13px;
+  font-size: 14px;
 }
 </style>
 
@@ -41,7 +42,7 @@ export default {
       <label class="control-label" id="lbpesquisaOP" for="lbpesquisaOP">Pesquisar Operações</label>
       <input
         type="text"
-        class="form-control"
+        class="form-control input-peq"
         id="txtpesquisaOP"
         aria-describedby="inputSuccess3Status"
         v-model="pesquisaOP"
