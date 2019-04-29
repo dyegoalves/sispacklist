@@ -1,5 +1,6 @@
 
 @extends('layout.master')
+@section('title', 'Cadastrar Produtos')
 @section('conteudo')
  <!-- =============================================== -->
   <!-- Inicio do Conteudo -->
@@ -10,11 +11,9 @@
       <h1>
        <span class="fa fa-register"></span> Cadastrar Produtos
       </h1>
-     
     </section>
     <!-- Main content -->
     <section class="content">
-
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
@@ -37,7 +36,6 @@
         <!-- /.box-footer-->
       </div>
       <!-- /.box -->
-
     </section>
     <!-- /.content -->
   </div>

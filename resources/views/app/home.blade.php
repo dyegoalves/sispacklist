@@ -1,8 +1,8 @@
 
 @extends('layout.master')
+@section('title', 'Inicio')
 @section('conteudo')
  <!-- =============================================== -->
-
   <!-- Inicio do Conteudo -->
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -12,11 +12,9 @@
        <span class="fa fa-home"></span> Home
         <small> - Inicio do Sistema</small>
       </h1>
-     
     </section>
     <!-- Main content -->
     <section class="content">
-
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
@@ -39,7 +37,6 @@
         <!-- /.box-footer-->
       </div>
       <!-- /.box -->
-
     </section>
     <!-- /.content -->
   </div>

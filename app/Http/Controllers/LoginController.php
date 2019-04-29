@@ -11,33 +11,22 @@ use Redirect;
 
 class LoginController extends Controller
 {
-     
-   
-    
-    public function authenticate( Input $input){
-        
-        //Capturando usuario no banco de dados
-        $user = User::where('email', $input->get('email'))->first();
-        
-        //Existe este usuario , se nao existe enviar mensagem de error para usuario
-        if(!$user) {
-          return redirect()
-                            ->route('login')
-                            ->with('error', 'Usuario  ' . $input->get('email') .  ' nao está cadastrado')
-                            ->withInput();
+    public function authenticate(Input $input){
+        //Validando se o email existe
+        if (!User::where('email', $input->get('email'))->first()){
+            Session::flash('error', Lang::get('Email nao cadastrado no sistema!'));
+            return Redirect::route('login')->withInput();
         }
-    
-        //Validando usuario e senha , Trur para os 2 ok logar 
+        //Validando usuario e senha 
         if (Auth::attempt(['email' => $input->get('email'), 'password' => $input->get('password')]))
         {
             return redirect()->route('inicio'); 
-        //Se nao senha incorreta    
+        //Senha incorreta
         }else {
             Session::flash('error', Lang::get('Senha incorreta para este email'));
             return Redirect::route('login')->withInput();
         }
     }
-
     public function logout(){
         Auth::logout();
         return redirect()->route('login');     

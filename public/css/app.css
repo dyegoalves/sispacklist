@@ -13403,7 +13403,7 @@ table.text-center th {
 }
 
 .input-peq {
-  height: 22px;
+  height: 26px;
   padding: 5px 10px;
   font-size: 14px;
   line-height: 1.5;
@@ -13412,7 +13412,7 @@ table.text-center th {
 
 #frmlogin .glyphicon {
   position: absolute;
-  top: 5px;
+  top: 7px;
   display: inline-block;
   font-family: "Glyphicons Halflings";
   font-style: normal;

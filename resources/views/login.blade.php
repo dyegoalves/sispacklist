@@ -27,6 +27,7 @@
       @if (session('error'))
          <login-alert :errormesagem = "{{ json_encode(session('error')) }}" ></login-alert>
       @endif
+
     <form id = "frmlogin"action="{{ route('logarUsuario')}}" method="post">
       @csrf
        <div class="form-group has-feedback">
@@ -47,7 +48,6 @@
       </div>
      </form>
     <a href="#">Esqueceu senha ?</a><br>
-    <a href="register.html" class="text-center">Registrar novo Usuario? </a>
   </div>
 </div>
 </body>

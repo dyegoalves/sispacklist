@@ -18,7 +18,7 @@ class Log
         if(!Auth::check()){
              return redirect()
                             ->route('login')
-                            ->with('error', 'Favor logar no sistema')
+                            ->with('error', 'Acesso nao autorizado direto na URL, favor logar no sistema')
                             ->withInput();
         }
     return $next($request);
