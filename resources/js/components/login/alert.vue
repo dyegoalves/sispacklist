@@ -3,7 +3,6 @@ export default {
   props: ["errormesagem"]
 };
 </script>
-
 <style>
 /* Efeito de Fad in e Out */
 #alertAppDiv {

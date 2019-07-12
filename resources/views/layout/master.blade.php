@@ -36,6 +36,8 @@
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
+
+               
                </a>
                <div class="navbar-custom-menu">
                   <ul class="nav navbar-nav">
@@ -118,7 +120,7 @@
                      </a>
                      <ul class="treeview-menu">
                         <li>
-                           <a href="{{ route('estoque-cadastro-PKLECP')}}"><i class="fa fa-circle-o"></i> PKLECP
+                           <a href="{{ route('PKECP')}}"><i class="fa fa-circle-o"></i> PKECP
                            </a>
                         </li>
                      </ul>

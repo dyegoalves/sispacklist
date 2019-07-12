@@ -9,6 +9,10 @@ Route::post('/login', "LoginController@authenticate")->name('logarUsuario');
 Route::group(['middleware' => ['log']], function () {
     //Inicio do sistema
     Route::get('/inicio', function () {return view('app.home');})->name("inicio");
-    //Cadastrar Produto em Estoque 
-    Route::get('/estoque-cadastro-PKLECP', "PKLECPController@viewPKLECP")->name('estoque-cadastro-PKLECP');
+    //PKECP Estoque Cadastrar Produto - view 
+    Route::get('/PKECP', "PKECPController@viewPKECP")->name('PKECP');
+   
+    Route::post('/cmd-operacao', "PKECPController@cmdOperacao")->name('cmd-operacao');
+       
 });
+

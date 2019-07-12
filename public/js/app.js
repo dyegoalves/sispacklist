@@ -1805,15 +1805,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      pesquisaOP: ""
+      pesquisaOP: "",
+      error: ""
     };
   },
-  mounted: function mounted() {
-    console.log("Component Pesquisa.");
-  },
+  computed: function computed() {},
+  mounted: function mounted() {},
   methods: {
-    enviarOP: function enviarOP() {
-      alert(this.pesquisaOP);
+    enviarOP: function enviarOP(e) {
+      var self = this;
+      axios.post("http://localhost:8000/cmd-operacao", {
+        pesquisaOP: this.pesquisaOP.toUpperCase()
+      }).then(function (response) {
+        if (response.data.rota) {
+          window.location = response.data.rota;
+        } else {
+          self.error = response.data.error;
+          setTimeout(function () {
+            self.error = null;
+          }, 2000);
+        }
+      }).catch(function (error) {});
     }
   }
 });
@@ -4366,7 +4378,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\r\n/* Efeito de Fad in e Out */\n#alertAppDiv {\r\n  color: #fff;\r\n  opacity: 0;\r\n  -webkit-animation: anima 5s ease infinite;\r\n          animation: anima 5s ease infinite;\n}\n@-webkit-keyframes anima {\nto {\r\n    opacity: 1;\n}\n}\n@keyframes anima {\nto {\r\n    opacity: 1;\n}\n}\n#alertlogin:link {\r\n  text-decoration: none;\n}\r\n\r\n/* //Rescrevendo */\n#loginpage .alert .close {\r\n  color: #fff;\r\n  opacity: 0.5;\r\n  filter: alpha(opacity=20);\n}\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\r\n/* Efeito de Fad in e Out */\n#alertAppDiv {\r\n  color: #fff;\r\n  opacity: 0;\r\n  -webkit-animation: anima 5s ease infinite;\r\n          animation: anima 5s ease infinite;\n}\n@-webkit-keyframes anima {\nto {\r\n    opacity: 1;\n}\n}\n@keyframes anima {\nto {\r\n    opacity: 1;\n}\n}\n#alertlogin:link {\r\n  text-decoration: none;\n}\r\n\r\n/* //Rescrevendo */\n#loginpage .alert .close {\r\n  color: #fff;\r\n  opacity: 0.5;\r\n  filter: alpha(opacity=20);\n}\r\n", ""]);
 
 // exports
 
@@ -4385,7 +4397,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#lbpesquisaOP {\r\n  color: #b8c7ce;\r\n  font-size: 16px;\r\n  font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-weight: 400;\n}\n#txtpesquisaOP {\r\n  border-radius: 1px;\n}\n#txtpesquisaOP::-webkit-input-placeholder {\r\n  font-size: 14px;\n}\n#txtpesquisaOP:-ms-input-placeholder {\r\n  font-size: 14px;\n}\n#txtpesquisaOP::-ms-input-placeholder {\r\n  font-size: 14px;\n}\n#txtpesquisaOP::placeholder {\r\n  font-size: 14px;\n}\r\n", ""]);
+exports.push([module.i, "\n#lbpesquisaOP {\r\n  color: #b8c7ce;\r\n  font-size: 16px;\r\n  font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-weight: 400;\n}\n#txtpesquisaOP {\r\n  border-radius: 1px;\n}\n#txtpesquisaOP::-webkit-input-placeholder {\r\n  font-size: 12px;\n}\n#txtpesquisaOP:-ms-input-placeholder {\r\n  font-size: 12px;\n}\n#txtpesquisaOP::-ms-input-placeholder {\r\n  font-size: 12px;\n}\n#txtpesquisaOP::placeholder {\r\n  font-size: 12px;\n}\n#errorcmd {\r\n  color: #b8c7ce;\r\n  font-size: 16px;\r\n  font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-weight: 400;\n}\r\n", ""]);
 
 // exports
 
@@ -35703,6 +35715,7 @@ var render = function() {
         attrs: {
           type: "text",
           id: "txtpesquisaOP",
+          name: "txtpesquisaOP",
           "aria-describedby": "inputSuccess3Status",
           placeholder: "Digite a Operação e dê Enter"
         },
@@ -35725,7 +35738,27 @@ var render = function() {
           }
         }
       })
-    ])
+    ]),
+    _vm._v(" "),
+    _vm.error
+      ? _c(
+          "li",
+          _vm._g(
+            { staticClass: "alert header", attrs: { id: "errorlb" } },
+            _vm.apagar
+          ),
+          [
+            _c(
+              "label",
+              {
+                staticClass: "control-label",
+                attrs: { id: "errorcmd", for: "errorcmd" }
+              },
+              [_vm._v(_vm._s(_vm.error))]
+            )
+          ]
+        )
+      : _vm._e()
   ])
 }
 var staticRenderFns = []
