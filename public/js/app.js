@@ -1814,7 +1814,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     enviarOP: function enviarOP(e) {
       var self = this;
-      axios.post("http://localhost:8000/cmd-operacao", {
+      axios.post("/cmd-operacao", {
         pesquisaOP: this.pesquisaOP.toUpperCase()
       }).then(function (response) {
         if (response.data.rota) {

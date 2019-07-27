@@ -14,7 +14,7 @@ export default {
     enviarOP: function(e) {
       const self = this;
       axios
-        .post("http://localhost:8000/cmd-operacao", {
+        .post("/cmd-operacao", {
           pesquisaOP: this.pesquisaOP.toUpperCase()
         })
         .then(function(response) {
