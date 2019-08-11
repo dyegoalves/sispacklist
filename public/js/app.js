@@ -1823,7 +1823,7 @@ __webpack_require__.r(__webpack_exports__);
           self.error = response.data.error;
           setTimeout(function () {
             self.error = null;
-          }, 2000);
+          }, 2500);
         }
       }).catch(function (error) {});
     }
@@ -4397,7 +4397,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#lbpesquisaOP {\r\n  color: #b8c7ce;\r\n  font-size: 16px;\r\n  font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-weight: 400;\n}\n#txtpesquisaOP {\r\n  border-radius: 1px;\n}\n#txtpesquisaOP::-webkit-input-placeholder {\r\n  font-size: 12px;\n}\n#txtpesquisaOP:-ms-input-placeholder {\r\n  font-size: 12px;\n}\n#txtpesquisaOP::-ms-input-placeholder {\r\n  font-size: 12px;\n}\n#txtpesquisaOP::placeholder {\r\n  font-size: 12px;\n}\n#errorcmd {\r\n  color: #b8c7ce;\r\n  font-size: 16px;\r\n  font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-weight: 400;\n}\r\n", ""]);
+exports.push([module.i, "\n#lbpesquisaOP {\r\n  color: #b8c7ce;\r\n  font-size: 16px;\r\n  font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-weight: 400;\n}\n#txtpesquisaOP {\r\n  border-radius: 1px;\n}\n#txtpesquisaOP::-webkit-input-placeholder {\r\n  font-size: 10pt;\n}\n#txtpesquisaOP:-ms-input-placeholder {\r\n  font-size: 10pt;\n}\n#txtpesquisaOP::-ms-input-placeholder {\r\n  font-size: 10pt;\n}\n#txtpesquisaOP::placeholder {\r\n  font-size: 10pt;\n}\n#errorcmd {\r\n  color: lightcoral;\r\n  font-size: 12pt;\r\n  text-align: center;\r\n  font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\r\n  font-weight: bold;\n}\r\n", ""]);
 
 // exports
 

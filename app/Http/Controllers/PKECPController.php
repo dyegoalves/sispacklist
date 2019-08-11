@@ -27,7 +27,7 @@ class PKECPController extends Controller
                                $rota = ['rota' => $op];
                                return response()->json($rota);  
                         }else{
-                               $error = ['error' => 'Nao existe este comando'];
+                               $error = ['error' => 'Nao existe esta Operação'];
                                return response()->json($error);         
                         }           
                                                 

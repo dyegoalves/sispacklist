@@ -8,6 +8,7 @@ export default {
   },
 
   computed() {},
+
   mounted() {},
 
   methods: {
@@ -24,7 +25,7 @@ export default {
             self.error = response.data.error;
             setTimeout(function() {
               self.error = null;
-            }, 2000);
+            }, 2500);
           }
         })
         .catch(function(error) {});
@@ -32,7 +33,6 @@ export default {
   }
 };
 </script>
-
 <style>
 #lbpesquisaOP {
   color: #b8c7ce;
@@ -44,16 +44,16 @@ export default {
   border-radius: 1px;
 }
 #txtpesquisaOP::placeholder {
-  font-size: 12px;
+  font-size: 10pt;
 }
 #errorcmd {
-  color: #b8c7ce;
-  font-size: 16px;
+  color: lightcoral;
+  font-size: 12pt;
+  text-align: center;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: bold;
 }
 </style>
-
 <template>
   <div>
     <li class="header">
