@@ -11,3 +11,4 @@ npm-debug.log
 yarn-error.log
 debug.log
 .vscode/launch.json
+.vscode/settings.json
